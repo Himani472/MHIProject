@@ -1,0 +1,44 @@
+<section class="form-gradient mb-5">
+  
+  <!--Form with header-->
+  <mdb-card  cascade="true">
+<mdb-card-body class="mx-4" cascade="true" class="text-center">
+  <mdb-card-text>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<div class="md-form" >
+ 
+  <input type="email" id="defaultLoginFormEmail" class="form-control mb-4 white-text textcolor" placeholder="E-mail"  formControlName="email">
+
+<!-- Password -->
+<input type="password" id="defaultLoginFormPassword" class="form-control mb-4 textcolor" placeholder="Password"  formControlName="password">
+
+<div class="d-flex justify-content-around">
+<div>
+  <!-- Remember me -->
+ 
+</div>
+<div>
+  <!-- Forgot password -->
+  <a href="">Forgot password?</a>
+</div>
+</div>
+
+<!-- Sign in button -->
+<button class="btn btn-info btn-block my-4 morpheus-den-gradient color-block mb-3 mx-auto " type="submit">Submit</button>
+<!-- Social login -->
+<p class="textcolor">or sign in with:</p>
+
+<a href="#" class="mx-2 textcolor" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+<a href="#" class="mx-2 textcolor" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+<a href="#" class="mx-2 textcolor" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+<a href="#" class="mx-2 textcolor" role="button"><i class="fab fa-github light-blue-text"></i></a>
+  <!--Grid column-->
+
+</div>
+</form >
+</mdb-card-text>
+<!--Grid row-->
+</mdb-card-body>
+</mdb-card>
+</section>
+

@@ -1,0 +1,39 @@
+body, html {
+  height: 100%;
+}
+.bg {
+  /* The image used */
+  background-image: url("https:////mdbootstrap.com/img/Photos/Others/images/91.jpg");
+  position: fixed;
+  background-size: 100%;
+  min-width: 100%;
+  /* Half height */
+  height: 100%;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card {
+  background-color: rgba(126, 123, 215, 0.2);
+}
+
+.md-form label {
+  color: #ffffff;
+}
+.textcolor{
+    color: white;
+    size: 20px;
+}
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  margin-left: 50px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:white;
+  opacity: 1; /* Firefox */
+}
