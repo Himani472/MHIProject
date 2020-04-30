@@ -14,4 +14,5 @@ export class InternComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }

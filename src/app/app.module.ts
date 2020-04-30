@@ -10,8 +10,8 @@ import { HrComponentComponent } from './hr-component/hr-component.component';
 import { MentorComponentComponent } from './mentor-component/mentor-component.component';
 import { InternComponentComponent } from './intern-component/intern-component.component';
 import { DisplayComponent } from './display/display.component';
-
-
+import { MentorAssignmentComponent } from './mentor-assignment/mentor-assignment.component';
+import { MentorSubmittedComponent } from './mentor-submitted/mentor-submitted.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { DisplayComponent } from './display/display.component';
     MentorComponentComponent,
     InternComponentComponent,
     DisplayComponent,
-    
+    MentorAssignmentComponent,
+    MentorSubmittedComponent,
     
   ],
   imports: [
