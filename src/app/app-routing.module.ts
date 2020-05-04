@@ -6,6 +6,11 @@ import { MentorComponentComponent } from './mentor-component/mentor-component.co
 import { HrComponentComponent } from './hr-component/hr-component.component';
 import { InternComponentComponent } from './intern-component/intern-component.component';
 import { DisplayComponent } from './display/display.component';
+import { MentorAssignmentComponent } from './mentor-assignment/mentor-assignment.component';
+import { MentorSubmittedComponent } from './mentor-submitted/mentor-submitted.component';
+import { InternAssignmentComponent } from './intern-assignment/intern-assignment.component';
+import { InternSubmitComponent } from './intern-submit/intern-submit.component';
+import { IntrernFeedbackComponent } from './intrern-feedback/intrern-feedback.component';
 
 const routes: Routes = [
   { path:'',component:DisplayComponent,
@@ -16,9 +21,23 @@ const routes: Routes = [
   ]
 },
   
-  {path:'Mentor',component:MentorComponentComponent},
+  {path:'Mentor',component:MentorComponentComponent,
+  children: [
+    { path: '', redirectTo: 'MentorAsssignment', pathMatch: 'full' },
+    { path:'MentorAsssignment',component:MentorAssignmentComponent},
+    { path:'Mentorsubmitted',component:MentorSubmittedComponent}
+  ]
+},
   {path:'Hr',component:HrComponentComponent},
-  {path:'Intern',component:InternComponentComponent}  
+  {path:'Intern',component:InternComponentComponent,
+       children:[
+        { path: '', redirectTo: 'InternAssignment', pathMatch: 'full' },
+        { path:'InternAssignment',component:InternAssignmentComponent},
+        { path:'InternSubmit',component:InternSubmitComponent},
+        { path:'Interfeedback',component:IntrernFeedbackComponent}
+        
+       ]
+}  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
@@ -30,4 +49,10 @@ export const routingComponents=[
   LogincomponentComponent,
   MentorComponentComponent,
   HrComponentComponent,
-  InternComponentComponent]
+  InternComponentComponent,
+  MentorAssignmentComponent,
+  MentorSubmittedComponent,
+  InternAssignmentComponent,
+  InternSubmitComponent,
+  IntrernFeedbackComponent
+]

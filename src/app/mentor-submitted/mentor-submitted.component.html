@@ -1,1 +1,17 @@
-<p>mentor-submitted works!</p>
+<mdb-card class="card">
+<table mdbTable>
+    <thead class="black white-text">
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let el of elements">
+        <th scope="row">{{el.id}}</th>
+        <td>{{el.StudentNAme}}</td>
+        <td>{{el.Dateofsubmition}}</td>
+        <td>{{el.Task}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </mdb-card>

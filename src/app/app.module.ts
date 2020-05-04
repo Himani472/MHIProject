@@ -12,6 +12,9 @@ import { InternComponentComponent } from './intern-component/intern-component.co
 import { DisplayComponent } from './display/display.component';
 import { MentorAssignmentComponent } from './mentor-assignment/mentor-assignment.component';
 import { MentorSubmittedComponent } from './mentor-submitted/mentor-submitted.component';
+import { InternAssignmentComponent } from './intern-assignment/intern-assignment.component';
+import { IntrernFeedbackComponent } from './intrern-feedback/intrern-feedback.component';
+import { InternSubmitComponent } from './intern-submit/intern-submit.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { MentorSubmittedComponent } from './mentor-submitted/mentor-submitted.co
     DisplayComponent,
     MentorAssignmentComponent,
     MentorSubmittedComponent,
+    InternAssignmentComponent,
+    IntrernFeedbackComponent,
+    InternSubmitComponent,
     
   ],
   imports: [

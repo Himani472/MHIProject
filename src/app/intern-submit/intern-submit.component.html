@@ -1,0 +1,70 @@
+<div class="card-block mt-20px">
+    <mdb-card>
+      <!--Header-->
+      <!--Header-->
+
+      <div class="header morpheus-den-gradient">
+
+        <div class="row d-flex justify-content-center">
+          <h3 class="white-text mb-0 py-5 font-weight-bold">Submit the task</h3>
+        </div>
+
+      </div>
+      <!--Header-->
+      <mdb-card-body class="mx-4">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+         
+          <table class="table">
+               <div class="md-form">
+            <div class="md-form">
+
+                <input type="text" id="form106" class="form-control margin margin2" mdbInput formControlName="Subject">
+                <label for="form106" class=" margin white-text">Your Name</label>
+              </div>
+             <div class="md-form">
+              <label for="myfile" class="white-text margin ">Select files:</label>
+              <input type="file" id="myfile" name="myfile" multiple class="margin margin2">
+            </div>
+            <div class="md-form">
+
+              <input type="date" id="input" class="form-control margin margin2 white-text" mdbInput formControlName="date">
+
+            </div>
+          </div>
+
+          <div class="md-form">
+
+            <textarea type="text" id="form107" class="md-textarea form-control margin margin2" rows="5" mdbInput
+              formControlName="TaskDetails"></textarea>
+            <label for="form107" class="margin  white-text">AboutTask</label>
+          </div>
+          <div class="md-form">
+
+            <select class="ui search dropdown select border-bottom white-text margin margin2">
+                <option value="">Select technogy</option>
+              <option value="1">Angular</option>
+              <option value="2">java</option>
+              <option value="3">node</option>
+            </select>
+          </div>
+        </table>  
+          <!--Grid row-->
+          <div class="row d-flex align-items-center mb-3 mt-4">
+
+            <!--Grid column-->
+            <div class="col-md-12">
+              <div class="text-center">
+                <button type="submit" mdbBtn color="blue" rounded="true"
+                  class="z-depth-1a  waves-effect button ">Submit</button>
+              </div>
+            </div>
+            <!--Grid column-->
+
+          </div>
+        </form>
+        <!--Grid row-->
+          
+      </mdb-card-body>
+
+    </mdb-card>
+  </div>
