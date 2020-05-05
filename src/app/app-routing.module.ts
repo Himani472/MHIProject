@@ -11,6 +11,8 @@ import { MentorSubmittedComponent } from './mentor-submitted/mentor-submitted.co
 import { InternAssignmentComponent } from './intern-assignment/intern-assignment.component';
 import { InternSubmitComponent } from './intern-submit/intern-submit.component';
 import { IntrernFeedbackComponent } from './intrern-feedback/intrern-feedback.component';
+import { HrpermissionComponent } from './hrpermission/hrpermission.component';
+import { HrFeedbackComponent } from './hr-feedback/hr-feedback.component';
 
 const routes: Routes = [
   { path:'',component:DisplayComponent,
@@ -28,7 +30,18 @@ const routes: Routes = [
     { path:'Mentorsubmitted',component:MentorSubmittedComponent}
   ]
 },
-  {path:'Hr',component:HrComponentComponent},
+  {path:'Hr',component:HrComponentComponent,
+  children:[
+    { path: '', redirectTo: 'hrpermission', pathMatch: 'full' },
+    { path:'hrpermission',component:HrpermissionComponent},
+    { path:'hrfeedback ',component:HrFeedbackComponent}
+     
+    
+    
+   ]
+
+
+},
   {path:'Intern',component:InternComponentComponent,
        children:[
         { path: '', redirectTo: 'InternAssignment', pathMatch: 'full' },
@@ -54,5 +67,7 @@ export const routingComponents=[
   MentorSubmittedComponent,
   InternAssignmentComponent,
   InternSubmitComponent,
-  IntrernFeedbackComponent
+  IntrernFeedbackComponent,
+  HrpermissionComponent,
+  HrFeedbackComponent
 ]

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hr-component.component.scss']
 })
 export class HrComponentComponent implements OnInit {
-
+  toggle=false;
   constructor() { }
 
   ngOnInit(): void {

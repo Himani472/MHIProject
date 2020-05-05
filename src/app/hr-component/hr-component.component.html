@@ -1,1 +1,139 @@
-<p>hr-component works!</p>
+<header class="h-100">
+    <div>
+      <div class="">
+  
+        <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg  indigo" [containerInside]="false">
+  
+  
+          <mdb-navbar-brand >
+            <mdb-icon fas icon="chart-pie" class="mr-3" (click)="toggle=!toggle" ></mdb-icon>
+            <a class="logo navbar-brand" href="#">
+              <strong>Mentor Section</strong>
+            </a>
+          </mdb-navbar-brand>
+          <links>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active waves-light" mdbWavesEffect>
+                <a class="nav-link">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item waves-light" mdbWavesEffect>
+                <a class="nav-link">AssignTask</a>
+              </li>
+              <li class="nav-item waves-light" mdbWavesEffect>
+                <a class="nav-link">Submitted</a>
+              </li>
+            </ul>
+          </links>
+        </mdb-navbar>
+      </div>
+      <!-- Main -->
+      <!-- <div class="view intro-2">
+        <div class="full-bg-img"> -->
+          <div class="row size " style="margin:0px 0px 0px 0px;" >
+  
+  
+              <div class="sidebar-fixed position-fixed "   *ngIf="toggle">
+  
+  
+                <div class="avatar mx-auto text-center ">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg" class="rounded-circle"
+                    width="100px">
+                </div>
+  
+  
+  
+                <h4 style="text-transform: capitalize" class="name text-center">Mentor section</h4>
+  
+  
+                <div class="list-group list-group-flush">
+                  <a routerLink="" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                    <mdb-icon fas icon="chart-pie" class="mr-3"></mdb-icon>Dashboard
+                  </a>
+                  <a routerLink="" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                    <mdb-icon fas icon="user" class="mr-3"></mdb-icon>Users
+                  </a>
+                  <a routerLink="" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                    <mdb-icon fas icon="table" class="mr-3"></mdb-icon>Blog
+                  </a>
+                  <a routerLink="/Hr/hrpermission" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                    <mdb-icon far icon="map" class="mr-3"></mdb-icon>Assignment
+                  </a>
+                  <a routerLink="/Mentor/Mentorsubmitted" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                    <mdb-icon fas icon="exclamation" class="mr-3"></mdb-icon>Submitted
+                  </a>
+                </div>
+  
+  
+              </div>
+  
+            <div class=" col-lg-12" style="padding: 0px;" >
+              <div class="mask rgba-purple-light flex-center view">
+                <div class="container text-center white-text wow fadeInUp">
+                  <router-outlet></router-outlet>   
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- </div>
+      </div> -->
+    </div>
+  
+    <!-- /.Main -->
+  </header>
+  <!--Main Navigation-->
+  
+  <!--Main Layout-->
+  
+  <!-- Footer -->
+  <footer class="page-footer font-small black">
+  
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+          <div class="mb-5 flex-center">
+  
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <mdb-icon fab icon="facebook" size="2x" class="white-text mr-md-5 mr-3"></mdb-icon>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <mdb-icon fab icon="twitter" size="2x" class="white-text mr-md-5 mr-3"></mdb-icon>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <mdb-icon fab fab icon="google-plus" size="2x" class="white-text mr-md-5 mr-3"></mdb-icon>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <mdb-icon fab icon="linkedin" size="2x" class="white-text mr-md-5 mr-3"></mdb-icon>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <mdb-icon fab icon="instagram" size="2x" class="white-text mr-md-5 mr-3"></mdb-icon>
+            </a>
+            <!--Pinterest-->
+            <a class="pin-ic">
+              <mdb-icon fab icon="pinterest" size="2x" class="white-text mr-md-5 mr-3"></mdb-icon>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  </footer>
+  <!-- Footer -->
+  <!--Main Layout-->
+  
