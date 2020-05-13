@@ -17,6 +17,9 @@ import { IntrernFeedbackComponent } from './intrern-feedback/intrern-feedback.co
 import { InternSubmitComponent } from './intern-submit/intern-submit.component';
 import { HrFeedbackComponent } from './hr-feedback/hr-feedback.component';
 import { HrpermissionComponent } from './hrpermission/hrpermission.component';
+import { HrFeedbacksComponent } from './hr-feedbacks/hr-feedbacks.component';
+import { ActiveGuard } from './active.guard';
+import { AuthServiceService } from './auth-service.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,7 @@ import { HrpermissionComponent } from './hrpermission/hrpermission.component';
     InternSubmitComponent,
     HrFeedbackComponent,
     HrpermissionComponent,
+    HrFeedbacksComponent,
     
   ],
   imports: [
@@ -44,7 +48,7 @@ import { HrpermissionComponent } from './hrpermission/hrpermission.component';
     AppRoutingModule,
    
   ],
-  providers: [],
+  providers: [ActiveGuard,AuthServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

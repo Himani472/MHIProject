@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {USER_DATA} from './data';
 import { Router } from '@angular/router';
+import {  ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-logincomponent',
@@ -10,47 +12,50 @@ import { Router } from '@angular/router';
 })
 export class LogincomponentComponent implements OnInit {
   registerForm: FormGroup;
+ 
 
-
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+  
+    ) { }
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(10)]),
-      password: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(10)]),
-     
+      password: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(10)])
+      
  });
+
   }
 
 
   checkUser(userData){
-    USER_DATA.map((user)=> {
-      console.log(user);
-      console.log(userData);
-      if(user.Email === userData.Email){
-      
-        if(user.password === userData.password){
-          console.log(user);
-       switch(userData.Designation){
+    const userInfo=USER_DATA.filter(user=>user.Email===userData.email&&user.password===userData.password);
+    
+   for(let user of  userInfo )
+    {
+      console.log( user)
+      localStorage.setItem('user',JSON.stringify (user)) 
+       switch(user.Designation){
         
            case 'Hr':
             this.router.navigateByUrl('Hr');
             break;
 
            case 'Intern':
-            this.router.navigateByUrl('Intern');
+             console.log('intren')
+            this.router.navigate(['/Intern']);
              break;
 
            case 'Mentor':
             this.router.navigateByUrl('Mentor');
              break;
+           default :
+           break;  
        }
 
         }
-        // USER_DATA.push(username);
        
-      }
-    })
+   
   }
   onSubmit(){
       const userData=this.registerForm.value;

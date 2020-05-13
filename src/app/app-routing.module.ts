@@ -13,7 +13,8 @@ import { InternSubmitComponent } from './intern-submit/intern-submit.component';
 import { IntrernFeedbackComponent } from './intrern-feedback/intrern-feedback.component';
 import { HrpermissionComponent } from './hrpermission/hrpermission.component';
 import { HrFeedbackComponent } from './hr-feedback/hr-feedback.component';
-
+import { HrFeedbacksComponent } from './hr-feedbacks/hr-feedbacks.component';
+import {ActiveGuard} from './active.guard'
 const routes: Routes = [
   { path:'',component:DisplayComponent,
   children: [
@@ -28,17 +29,16 @@ const routes: Routes = [
     { path: '', redirectTo: 'MentorAsssignment', pathMatch: 'full' },
     { path:'MentorAsssignment',component:MentorAssignmentComponent},
     { path:'Mentorsubmitted',component:MentorSubmittedComponent}
-  ]
+  ],canActivate:[ActiveGuard]
 },
   {path:'Hr',component:HrComponentComponent,
   children:[
     { path: '', redirectTo: 'hrpermission', pathMatch: 'full' },
     { path:'hrpermission',component:HrpermissionComponent},
-    { path:'hrfeedback ',component:HrFeedbackComponent}
-     
+    {path:'HrFeedback',component:HrFeedbackComponent} ,
+    {path:'Feedback',component:HrFeedbacksComponent}
     
-    
-   ]
+   ],canActivate:[ActiveGuard]
 
 
 },
@@ -49,7 +49,7 @@ const routes: Routes = [
         { path:'InternSubmit',component:InternSubmitComponent},
         { path:'Interfeedback',component:IntrernFeedbackComponent}
         
-       ]
+       ],canActivate:[ActiveGuard]
 }  
 ];
 @NgModule({
@@ -69,5 +69,6 @@ export const routingComponents=[
   InternSubmitComponent,
   IntrernFeedbackComponent,
   HrpermissionComponent,
-  HrFeedbackComponent
+  HrFeedbackComponent,
+  HrFeedbacksComponent
 ]

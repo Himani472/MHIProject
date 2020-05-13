@@ -6,7 +6,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./intern-assignment.component.scss']
 })
 export class InternAssignmentComponent implements OnInit {
-  registerForm: FormGroup;
+  
   constructor() { }
 
   ngOnInit(): void {

@@ -11,7 +11,7 @@ interface Food {
   styleUrls: ['./intrern-feedback.component.scss']
 })
 export class IntrernFeedbackComponent implements OnInit {
-  registerForm: FormGroup;
+ 
   constructor() { }
 
   ngOnInit(): void {}
